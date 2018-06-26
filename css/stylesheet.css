@@ -7,9 +7,17 @@ body{
 }
 
 button{
-  background-color: pink;
-  width:50px;
-  height:30px;
+  background-color: #2289c9;
+  border-bottom: 5px solid ##2b7db1;
+  border-radius: 10px;
+  color:white;
+  width:70px;
+  height:50px;
+  font-size:1.5em;
+  font-family: 'Amarante';
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .main-header{
@@ -22,7 +30,7 @@ button{
 .banner{
   text-align: center;
   color: black;
-  font-size: 8em;
+  font-size: 9em;
   font-family: 'Vibur';
   margin:0;
 }
@@ -50,6 +58,17 @@ p {
   font-family:'Homenaje';
   font-size: 1.5em;
 }
+/*Game page*/
+#matchgame{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.questionblock{
+  display: grid;
+  width:200px;
+  height:auto;
+  justify-content: center;
+}
 
 /*Artsy Image Designs*/
 .pizza1 {
@@ -69,10 +88,15 @@ p {
 .speechbubble{
 width:200px;
 height:auto;
-margin-left: 900px;
+/* margin-left: 900px;
 margin-bottom: -100px;
-margin-top: 100px;
+margin-top: 100px; */
+margin-top:20px;
+margin-bottom:-90px;
+margin-left: auto;
+margin-right: auto;
 display: block;
+float: left;
 }
 
 .bowl {
@@ -80,27 +104,24 @@ display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.questionblock{
-  width:200px;
-  height:auto;
-}
+
 #indexquestion {
   width:30px;
   height: auto;
 }
 /*Media Queries*/
-@media (max-width:600px) {
+@media only screen and (max-width:400px) {
 
 /*Images */
   .pizza1 {
-    width:100px;
+    width:50px;
     height:auto;
     float:left;
     margin-top:-35px;
   }
 
   .pizza2 {
-    width:100px;
+    width:50px;
     height:auto;
     float:right;
     margin-top: -35px;
@@ -128,7 +149,7 @@ display: block;
   .banner{
     text-align: center;
     color: black;
-    font-size: 2em;
+    font-size: 1em;
     font-family: 'Vibur';
     margin:0;
   }
@@ -138,4 +159,63 @@ display: block;
   }
   p {
     font-size: 1.25em;
+  }
+}
+@media only screen and (max-width:700px) {
+
+/*Images */
+  .pizza1 {
+    width:100px;
+    height:auto;
+    float:left;
+    margin-top:-25px;
+    margin-left:-20px;
+  }
+
+  .pizza2 {
+    width:100px;
+    height:auto;
+    float:right;
+    margin-top: -25px;
+    margin-right: 20px;
+  }
+  .bowl {
+    width: 300px;
+    height: auto;
+  }
+  .speechbubble{
+    width:150px;
+    height:auto;
+    margin-left: 475px;
+    margin-bottom: -100px;
+    margin-top: 100px;
+    display: none;
+  }
+  #indexquestion {
+    width:30px;
+    height: auto;
+  }
+
+  .questionblock{
+    width:10px;
+    height:auto;
+  }
+/*Designs*/
+  .container {
+    column-count: 1;
+  }
+  .banner{
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+    font-family: 'Vibur';
+    margin:0;
+  }
+  .howTo,
+  .recipes{
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.25em;
+  }
 }
