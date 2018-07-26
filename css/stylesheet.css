@@ -6,20 +6,6 @@ body{
   flex-direction: column;
 }
 
-button{
-  background-color: #2289c9;
-  border-bottom: 5px solid #2b7db1;
-  border-radius: 10px;
-  color:white;
-  width:70px;
-  height:50px;
-  font-size:1.5em;
-  font-family: 'Amarante';
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
 .main-header{
   background-color: #00d5f2;
   text-align: center;
@@ -39,26 +25,41 @@ button{
 .container{
   width:80%;
   margin:auto;
-  column-count: 2;
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
+}
+.lightboximg {
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
 }
 /*Body texts*/
 
   .col1,
   .col2{
   margin: 0px 10px;
+
   }
 
   .howTo,
   .recipes{
     font-size: 2.5em;
-    font-family:'Amarante'
+    font-family:'Amarante';
+    text-shadow: 2px .5px #2b7db1;
 }
 p {
   font-family:'Homenaje';
-  font-size: 1.5em;
+  font-size: 1.2em;
+  margin-right: auto;
+  border:  2px solid #4da6ff;
+  background-color: #4da6ff;
+  border-radius: 15px;
 }
+
 /*Image Page*/
 
 /*Artsy Image Designs*/
@@ -88,18 +89,41 @@ display: block;
 float: left;
 }
 
+.bowlimage{
+  display: block;
+  margin: auto;
+}
 .bowl {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin: auto; */
+  text-align: center;
 }
 
 #indexquestion {
   width:30px;
   height: auto;
 }
+
+.stitched {
+  position: relative;
+   padding: 10px;
+   margin: 120px auto;
+   width: 160px;
+   background: #63ecf0;
+   color: #000;
+   font-size: 25px;
+   line-height: 1em;
+   border: 2px solid #63c1f8;
+   border-radius: 50px;
+   text-shadow: -1px -1px #bfbfbf;
+}
+a {
+  text-decoration: none;
+  color:green;
+}
+
 /*Media Queries*/
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
 
 /*Images */
   .rice1 {
@@ -134,10 +158,6 @@ float: left;
     height: auto;
   }
 
-  .questionblock{
-    width:10px;
-    height:auto;
-  }
 /*Designs*/
   .container {
     column-count: 1;
@@ -154,12 +174,18 @@ float: left;
     font-size: 1.5em;
   }
   p {
+    padding-top: -5px;
+    font-family:'Homenaje';
     font-size: 1.25em;
+    border:  1px solid lightgreen;
+    background-color: lightgreen;
+    border-radius: 15px;
   }
 }
 @media only screen and (max-width:700px) {
 
 /*Images */
+
   .rice1 {
     width:150px;
     height:auto;
